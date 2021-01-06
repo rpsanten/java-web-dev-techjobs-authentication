@@ -8,13 +8,13 @@ import javax.validation.constraints.Size;
 public class LoginFormDTO {
 
     @NotNull
-    @NotBlank
+    //@NotBlank
     @Size(min = 3, max = 30, message = "Username not acceptable. Please enter a username between" +
             " 3 and 30 characters.")
     private String username;
 
     @NotNull
-    @NotBlank
+    //@NotBlank
     @Size(min = 4, max = 27, message="Invalid passowrd. Please enter a new password that is between" +
             " 4 and 27 characters")
     private String password;
@@ -23,7 +23,7 @@ public class LoginFormDTO {
         return username;
     }
 
-    public void setUsername() {
+    public void setUsername(String username) {
         this.username = username;
     }
 

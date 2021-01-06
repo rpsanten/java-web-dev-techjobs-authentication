@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-<body class=""container>
+<body class="container">
 
-<header th:replace="fragments :: header"><</header>
+<header th:replace="fragments :: page-header"></header>
 
-<form method="post">
+<h1><br></h1>
+<form method="post" style="...">
     <div class="form-group">
         <label>Username
-            <input class = "form-control" th:field="{registerFormDTO.username}"/>
+            <input class = "form-control" th:field="${registerFormDTO.username}"/>
         </label>
         <p class="error" th:errors="${registerFormDTO.username}">
         </p>
@@ -16,7 +17,7 @@
     <div class = "form-group">
         <label>Password
             <input class="form-control" th:field="${registerFormDTO.password}"
-            type="password" />>
+            type="password" />
         </label>
         <p class="error" th:errors="${registerFormDTO.password}"></p>
     </div>
